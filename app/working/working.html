@@ -1,0 +1,22 @@
+<div class="rotated-45 colored color-1"></div>	
+<div class="rotated-45 colored color-2"></div>	
+<div class="rotated-95 colored color-3"></div>	
+<div class="rotated-45 colored color-4"></div>	
+<div class="rotated-45 colored color-5"></div>	
+<div class="rotated-95 colored color-6"></div>
+<div class="rotated-95 colored color-7"></div>		
+
+<article id="experience">	
+	<div class="scale-and-titles clearfix">
+		<div class="work-titles">
+			<p class="title" *ngFor="let work of works" [style.width]="work.width + '%' ">{{work.title}}</p>
+		</div>
+		<div class="work-scale">
+			<div class="work-period {{work.color}}" *ngFor="let work of works" 
+			[style.background-color]="work.color" 
+			[style.width]="work.width + '%' ">
+			<p>{{work.duration}}</p>
+		</div>
+	</div>
+</div>
+</article>

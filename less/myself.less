@@ -1,0 +1,72 @@
+@lightBlue: #018ec7;
+
+myself {
+	display: block;
+	width: 100%;
+	padding: 0 3em;
+
+	h3 {
+		text-align: center;
+		line-height: 1.5;
+		font-size: 24px;
+		word-spacing: 2px;
+	}
+
+	code {
+		color: @lightBlue;
+		font-family: monospace;
+		padding: 3px 6px;
+		font-size: .8em;
+		background-color: @lightGrey;
+		margin-right: 5px;
+	}
+
+	.json-table {
+		width: 100%;
+		display: table;
+		font-family: monospace;
+		margin-bottom: 1em;
+	}
+	.value {
+		margin-left: 50%;
+		i.flag {
+			margin-right: 0;
+			&.switzerland {
+				margin-right: -5px;
+			}
+		}
+	}
+	.type {
+		display: table-cell;
+	}
+	.line {
+		display: table-row;	
+	}
+	.value-title {
+		font-weight: 700;
+		color: @lightBlue;
+		padding-left: 3em;
+		display: table-cell;
+		padding-bottom: 10px;
+		&:first-of-type {
+			padding-top: 10px;
+		}
+	}
+	.bracket {
+		font-size: 1.3em;
+		color: grey;
+	}
+
+	@media (max-width: @phoneMax) {
+		padding: 1.5em;
+		.type {
+			display: block;
+		}
+		.value-title {
+			padding-left: 1em;
+		}
+		.value {
+			margin-left: 5%;
+		}
+	}
+}

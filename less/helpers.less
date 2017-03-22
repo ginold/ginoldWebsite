@@ -1,0 +1,14 @@
+.flex(){
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.calc(@prop; @val) {
+  @{prop}: calc(~'@{val}');
+  @{prop}: -moz-calc(~'@{val}');
+  @{prop}: -webkit-calc(~'@{val}');
+  @{prop}: -o-calc(~'@{val}');
+}

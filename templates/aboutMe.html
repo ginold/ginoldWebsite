@@ -1,0 +1,49 @@
+<h1 class="text-center">Me, Myself & I</h1>
+<working-experience></working-experience>
+
+<myself></myself>
+<education></education>
+
+
+<div class="ui raised segment about-me-segment">
+	<div class="ui grid">
+
+		<div class="stretched column">
+
+
+			<article  id="competences" class="ui segment tab-content hidden">
+
+				<div class="ui top attached tabular menu item four">
+					<a class="item active" data-tab="software-skills"><i class="icon code"></i>Software Skills</a>
+					<a class="item" data-tab="languages"><i class="icon globe"></i>Languages</a>
+					<a class="item" data-tab="soft-skills"><i class="icon users"></i>Soft skills</a>
+					<a class="item" data-tab="other-skills"><i class="icon birthday"></i>Others</a>
+				</div>
+				<div class="ui bottom attached tab segment active" data-tab="software-skills">
+					<div class="circles">
+						<div class="progress-circle fadeUpCircle transition hidden" [attr.data-value]="prog.value" *ngFor="let prog of progLangs">
+							<strong></strong>
+							<span>{{prog.title}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="ui bottom attached tab segment" data-tab="languages">
+					<div class="circles">
+						<div class="progress-circle fadeUpCircle transition hidden" [attr.data-value]="lang.value" *ngFor="let lang of languages">
+							<strong></strong>
+							<span><i class="flag {{lang.country}}"></i>{{lang.level}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="ui bottom attached tab segment" data-tab="soft-skills">
+					soft
+				</div>
+				<div class="ui bottom attached tab segment" data-tab="other-skills">
+					others
+				</div>
+			</article>
+
+
+		</div>
+	</div>
+</div>

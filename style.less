@@ -1,0 +1,267 @@
+@import './less/variables.less';
+@import './less/helpers.less';
+@import 'timeline.less';
+@import './less/progressCircles.less';
+@import '/less/myself.less';
+@import '/less/working.less';
+
+@font-face {
+	font-family: 'Open Sans Light';
+	font-style: normal;
+	font-weight: 300;
+	src:url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+
+body {
+	font-family: 'Open Sans Light';
+	color: #585858;
+}
+
+
+
+.languages {
+	right: 20px;
+	top: 20px;
+
+	.languages-list {
+		right: 10px;
+		left: initial !important;
+	}
+}
+
+section.full-height {
+	//height: 110vh;
+	@media (max-width: @phoneMax) {
+		height: auto;
+	}
+}
+section.segment {
+	margin: 0 !important;
+}
+section.youtube.full-height {
+	background-color: @green;
+}
+section.about-me {
+	background-image: linear-gradient(#fdfdfd, rgba(205, 205, 205, 0.16)) !important;
+    font-family: 'Open Sans';
+    padding: 0 !important;
+	h1 {
+		font-size: 6em;
+		margin-top: 0.3em;
+	}
+	.about-me-tabs {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		border: none !important;
+	}
+	.about-me-segment {
+		width: 95%;
+		margin: auto;
+		background-image: url("../img/crisp-paper-ruffles.png");
+	}
+	.tab-content {
+		margin-top: 0;
+		height: 70vh;
+		&:not(:first-of-type) {
+			display: none;
+		}
+	}
+	.ribbon {
+		font-family: 'Open Sans Light';
+		box-shadow: 5px 4px 7px @lightGrey;
+		cursor: pointer;
+		font-size: 1.5em;
+	}
+	.stretched.column {
+		width: 75% !important;
+	}
+
+	#competences {
+		.header {
+			width: 100%;
+		}
+		.tab {
+			height: calc(~"100% - 40px");
+			margin-bottom: 0;
+		}
+	}
+	//.about-me
+	@media (max-width: @tabletMax) {
+		.ribbon {
+			font-size: 1.3em;
+		}
+	}
+	@media (max-width: @phoneMax) {
+		padding: 0 !important;
+
+		.menu {
+			.item {
+				display: block !important;
+				p {
+					font-size: 12px;
+				}
+				i {
+					font-size: 20px;
+					width: 100%;
+				}
+			}
+		}
+		.stretched.column {
+			padding: 10px 0px !important;
+		}
+		.tab-content {
+			height: auto;
+		}
+		.about-me-tabs-container {
+			display: none !important;
+		}
+		.about-me-segment.segment, .about-me-segment .wide.column, .stretched.column {
+			width: 100% !important;
+		}
+	}
+}
+
+
+section.intro {
+	color: whitesmoke;
+	height: 100vh;
+	background-image: linear-gradient(to bottom, #58488a, #5d64d0);
+
+	.intro-header {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding-bottom: 60px;
+		padding-left: 8%;
+		height: 100%;
+		h1 {
+			color: #369;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h1, h2 {
+			margin: 0;
+		}
+		.my-name, .is-my-name {
+			font-size: 10vw;
+		}
+		.is-my-name {
+			line-height: 1;
+		}
+		.not-madam {
+			font-size: 2.62vw;
+		}
+		.adam {
+			width: 90%;
+			padding-left: 8%;
+			line-height: 1;
+			font-size: 15vw;
+			background-color: white;
+		}
+	}
+	@media (max-width: @tabletMax) {
+		.intro-header {
+			padding-left: 3%;
+			.adam {
+				font-size: 22vw;
+			}
+			.is-my-name, .my-name {
+				font-size: 15vw;
+			}
+			.not-madam {
+				font-size: 4vw;
+			}
+		}
+	}
+	@media (max-width: @phoneMax) {
+		height: 100%;
+		.intro-header {
+			padding-left: 5%;
+
+			.adam {
+				padding-left: 5%;
+				width: 100%;
+				font-size: 5em;
+			}
+			.my-name, .is-my-name {
+				font-size: 4em;
+			}
+			.not-madam {
+				font-size: 1em;
+				margin-top: 20px;
+			}
+		}
+
+	}
+}
+section.contact-me{
+	background-image: linear-gradient(#fff, #f7f7f7);
+}
+
+.cards {
+	display: flex;
+	flex-flow: wrap row;
+	justify-content: space-around;
+	.card {
+		margin: 0;
+		flex-basis: 25%;
+		height: 300px;
+		.card-description {
+			padding: 1em;
+		}
+		.description {
+			white-space: normal;
+			word-wrap: break-word;
+		}
+
+		.image {
+			width: 100%;
+			height: 150px;
+			background-size: cover;
+		}
+
+		@media (max-width: @tabletMax) {
+			flex-basis: 50%;
+		}
+	}
+}
+
+footer {
+	background-color: black;
+	color: whitesmoke;
+	padding: 20px 50px;
+}
+
+.main.menu {
+	position: relative;
+	margin-bottom: 0;
+	bottom: 46px;
+	width: 100%;
+	border-radius: 0;
+
+	a.item {
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			top: 90%;
+			left: 0;
+			visibility: hidden;
+			-webkit-transform: scaleX(0);
+			transform: scaleX(0);
+			-webkit-transition: all 0.3s ease-in-out 0s;
+			transition: all 0.3s ease-in-out 0s;
+		}
+		&:hover:before {
+			visibility: visible;
+			-webkit-transform: scaleX(1);
+			transform: scaleX(1);
+			background: black !important;
+		}
+	}
+	@media (max-width: @phoneMax) {
+		display: none;
+	}
+}

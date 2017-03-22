@@ -4,11 +4,31 @@
     <title>Angular QuickStart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
 
+
+    <link rel="stylesheet" type="text/css" href="node_modules\semantic-ui/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules\semantic-ui/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="helpers.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+
+    <script>
+      less = {
+        env: "development",
+        logLevel: 2,
+        rootpath: "."
+      };
+    </script>
+    <script src="node_modules\less\dist\less.min.js"></script>
+
+    <script
+    src="node_modules\jquery\dist\jquery.min.js"></script>
+    <script src="node_modules\semantic-ui/semantic.min.js"></script>
+        <script src="node_modules\jquery-circle-progress\dist\circle-progress.min.js"></script>
+
+    
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
-
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
 
@@ -19,6 +39,7 @@
   </head>
 
   <body>
-    <my-app>Loading AppComponent content here ...</my-app>
-  </body>
+    <app-root></app-root>
+  </body> 
+
 </html>

@@ -1,0 +1,96 @@
+  <!-- left-side menu -->
+  <sidemenu></sidemenu>
+
+  <!-- Site content inside the pusher!-->
+  <div class="pusher">
+
+<!--   	<section class="intro">
+  		<div class="ui right floated dropdown item languages">
+  			<i class="flag poland"></i>
+  			<div class="menu transition hidden languages-list">
+  				<div class="item"><i class="flag gb"></i>English</div>
+  				<div class="item"><i class="flag poland"></i>Polski</div>
+  				<div class="item"><i class="flag france"></i>Français</div>
+  				<div class="item"><i class="flag germany"></i>Deutsch</div>
+  			</div>
+  		</div>
+
+  		<div class="intro-header padding">
+  			<h2 class="my-name">Hello,</h2>
+  			<h1 class="adam">Adam</h1>
+  			<h2 class="is-my-name">is my name.</h2>
+  			<p class="not-madam"><strong>Gina</strong> is my family name. I'm not a madam.<i class="icon female"></i></p>
+  		</div>
+  		<main-menu></main-menu>
+  	</section> -->
+
+  	<section class="ui segment full-height about-me">
+  		<about-me></about-me>
+  	</section>
+
+  	<section class="ui segment full-height projects">
+  		<project-cards></project-cards>
+  	</section>
+
+  	<section class="ui segment full-height youtube">
+  		
+  		<h1>Hello {{name}}</h1>
+  		<button (click)="openMenu()" class="ui button basic">open!</button>
+
+  		<button (click)="showHobbiesFunc()" class="ui button circle">hobby!</button>
+
+  		<input [(ngModel)]="name" placeholder="name">
+
+
+  		<p [hidden]="!showHobbies">{{myJson.stringify(hobbies)}}</p>
+  		<h2>color : {{myColor}}</h2>
+
+  		<p *ngFor='let bitch of mainCtrl.bitches; let i = index;' (click)="mainCtrl.hide()">{{i + ' ' + bitch}}</p>
+
+  		<user-profile *ngFor="let item of mainCtrl.bitches" [color]="item" [after]="after"></user-profile>
+  	</section>
+  	<section class="ui segment full-height contact-me">
+  		<button class="ui github icon button">
+  			github
+  			<i class="github icon"></i>
+  		</button>
+
+  		<button class="ui linkedin icon button">
+  			linkedin
+  			<i class="linkedin icon"></i>
+  		</button>
+
+  		<button class="ui youtube icon button">
+  			youtube
+  			<i class="youtube icon"></i>
+  		</button>
+  		<button class="ui facebook icon button">
+  			facebook
+  			<i class="facebook icon"></i>
+  		</button>
+  	</section>
+
+
+
+  	<footer>
+  		<div class="ui stackable inverted divided equal height stackable grid">
+  			<div class="three wide column">
+  				<h4 class="ui inverted header">About</h4>
+  				<div class="ui inverted link list">
+  					<p href="#" class="item">Sitemap</p>
+  				</div>
+  			</div>
+  			<div class="three wide column">
+  				<h4 class="ui inverted header">Services</h4>
+  				<div class="ui inverted link list">
+  					<p href="#" class="item">Banana Pre-Order</p>
+  				</div>
+  			</div>
+  			<div class="seven wide column">
+  				<h4 class="ui inverted header">Footer Header</h4>
+  				<p>Extra space for p call to action inside the footer that could help re-engage users.</p>
+  			</div>
+  		</div>
+  	</footer>
+
+  </div>

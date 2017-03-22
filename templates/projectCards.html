@@ -1,0 +1,28 @@
+<h1 class="text-center">Work done. Well done.</h1>
+<div class="cards">
+  <div *ngFor="let p of projects" class="ui stackable card">
+    <div class="ui slide masked reveal ">
+      <div class="visible content">
+        <img class="image" [style.background-image]="getImgUrl(p.img)">
+        <div class="card-description">
+          <h3 class="header">{{p.what}}</h3>
+          <div class="meta">
+            <span class="date"><i class="icon calendar"></i>{{p.when}}</span>
+            <span class="description"><i class="icon marker"></i>{{p.where}}</span>
+          </div>
+          <p class="description">{{p.description}}</p>
+          <p class="description">
+            <i class="users icon"></i>
+            {{p.position}}
+          </p>
+        </div>
+
+      </div>
+      <div class="content hidden">
+        <button class="ui primary basic button">Primary</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 class="text-center">And others to come!</h2>
+

@@ -1,0 +1,134 @@
+@darkPrimaryOrange: #E64A19;
+@primaryOrange: #FF5722;
+@lightOrange: #FFCCBC;
+@accentOrange: #FF9800;
+@superLightGrey: #BDBDBD;
+
+working-experience {
+	width: 100%;
+	display: block;
+	height: 90vh;
+	background-color: rgba(116, 116, 116, 0.26);
+	overflow: hidden;
+	position: relative;
+
+	#experience {
+		height: 100%;
+		display: flex;
+	}
+	.scale-and-titles { 
+		width: 80%;
+		margin: auto;
+		padding-bottom: 80px; // bottom titles
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.work-titles {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		width: 100%;
+		.title {
+			    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 15pt;
+			margin-bottom: 45px;
+			&:after {
+				content: "";
+				width: 1px;
+				    margin-top: 5px;
+				margin-left: 20px;
+				background-color: @superLightGrey;
+				height: 70px;
+				position: absolute;
+				display: block;
+			}
+			&:nth-of-type(even) {
+				position: relative;
+				top: 200px;
+				&:after {
+					margin-top: -35px;
+					top: -100%;
+				}
+			}
+		}
+	}
+	.work-scale {
+		display: flex;
+		width: 100%;
+
+		.work-period {
+			height: 50px;
+			z-index: 5;
+			position: relative;
+			&:first-of-type {
+				border-radius: 12px 0 0 12px;
+			}
+			&:last-of-type {
+				border-radius: 0 12px 12px 0;
+			}
+
+
+		}
+	}
+	.colored {
+		width: 120%;
+		height: 35%;
+		margin-left: -65%;
+		transform: rotate(-45deg);
+		box-shadow: 0px 3px 10px rgba(92, 92, 92, 0.63);
+		position: absolute;
+	}
+	.color-1 {
+
+		background-color: rgb(217, 217, 217);
+
+		z-index: 3;
+	}
+	.color-2 {
+		transform: rotate(45deg);
+		width: 250%;
+		margin-left: -137%;
+		height: 30%;
+		z-index: 2;
+		background-color: @lightOrange;
+		box-shadow: 7px 7px 27px rgba(92, 92, 92, 0.63);
+	}
+	.color-3 {
+
+		width: 142%;
+		margin-left: -60%;
+		z-index: 1;
+		background-color: @primaryOrange;
+		box-shadow: inset 0 0 18px 4px rgba(0,0,0,.4);
+	}
+	.color-4 {
+		top: 20%;
+		left: 100%;
+		width: 150%;
+		background-color: @darkPrimaryOrange;
+		box-shadow: inset 9px 7px 8px 1px rgba(34, 36, 38, 0.26);
+	}
+	.color-5 {
+		transform: rotate(45deg);
+		width: 163%;
+		margin-left: -23%;
+		top: -85%;
+		background-color: #a95555;
+		z-index: 2;
+	}
+	.color-6 {
+		margin-left: -33%;
+		top: 8%;
+
+		background-color: #a95555;
+	}
+	.color-7 {
+		margin-left: 0;
+		background-color: #a95555;
+		left: 57%;
+		top: 50%;
+		box-shadow: 1px 0px 14px 2px rgba(0,0,0,.4);
+	}
+}

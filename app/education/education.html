@@ -1,0 +1,12 @@
+<section id="cd-timeline">
+	<div class="cd-timeline-block" *ngFor="let edu of educations">
+		<div class="cd-timeline-circle">
+			<i class="icon {{edu.icon}}"></i>
+		</div>
+		<div class="cd-timeline-content">
+			<h2 class="ui ribbon red label">{{edu.type}}</h2>
+			<p>{{edu.description}}</p>
+			<span class="cd-date">{{edu.date}}</span>
+		</div> 
+	</div> 
+</section>

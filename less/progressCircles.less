@@ -1,0 +1,62 @@
+.circles {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100%;
+	canvas {
+  	// height x  width are 200px by default in aboutMe.ts and scaled down
+  	height: 150px !important;
+  	width: 150px !important;
+  	@media (min-width: @desktopMax) {
+  		height: 180px !important;
+  		width: 180px !important;
+  	}
+  	@media (max-width: @tabletMax) {
+  		height: 100px !important;
+  		width: 100px !important;
+  	}
+  	@media (max-width: @phoneMax) {
+  		height: 80px !important;
+  		width: 80px !important;
+  	}
+  }
+  .progress-circle {
+    display: initial !important; // bug when fading in with circleProgress
+    flex-basis: 25%;
+    position: relative;
+    text-align: center;
+    strong {
+    	position: absolute;
+    	top: 55px;
+    	left: 0;
+    	width: 100%;
+    	text-align: center;
+    	line-height: 40px;
+    	font-size: 30px;
+    	@media (min-width: @desktopMax) {
+    		top: 80px;
+    	}
+    	@media (max-width: @tabletMax) {
+    		top: 30px;
+    	}
+    	@media (max-width: @phoneMax) {
+    		top: 20px;
+    		font-size: 24px;
+    	}
+    }
+    span {
+    	display: block;
+    	color: #aaa;
+    	margin-top: 6px;
+    	margin-bottom: 6px;
+    }
+    @media (max-width: @phoneMax) {
+    	flex-basis: 50%;
+
+    	span {
+    		margin-top: 0;
+    	}
+    }
+  }
+}
