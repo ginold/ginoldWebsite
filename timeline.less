@@ -1,9 +1,7 @@
 
 #cd-timeline {
 	position: relative;
-	padding: 0 2em;
-	margin-top: 3em;
-	margin-bottom: 3em;
+	margin: 3em 12em;
 
 	&:before {
 		/* this is the vertical line */
@@ -57,18 +55,20 @@
 			margin-left: 4px;
 		}
 	}
-
+	// cd-timeline
 	@media only screen and (max-width: @phoneMax) {
-		margin-top: 2em;
-		margin-bottom: 2em;
+		    margin: 2em 3em;
 		
 		&:before {
-			left: 27px;
+			left: 32px;
 		}
 
 		.cd-timeline-circle {
 			left: 0;
 		}
+	}
+	@media only screen and (min-width: @phoneMax) and (max-width: 1500px) {
+		    margin: 3em 6em;
 	}
 }
 

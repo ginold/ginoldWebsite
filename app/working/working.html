@@ -6,17 +6,35 @@
 <div class="rotated-95 colored color-6"></div>
 <div class="rotated-95 colored color-7"></div>		
 
-<article id="experience">	
-	<div class="scale-and-titles clearfix">
-		<div class="work-titles">
-			<p class="title" *ngFor="let work of works" [style.width]="work.width + '%' ">{{work.title}}</p>
-		</div>
-		<div class="work-scale">
-			<div class="work-period {{work.color}}" *ngFor="let work of works" 
-			[style.background-color]="work.color" 
-			[style.width]="work.width + '%' ">
-			<p>{{work.duration}}</p>
-		</div>
-	</div>
-</div>
-</article>
+<section id="experience">	
+  <div class="scale-and-titles clearfix">
+    <h1>Experience.</h1>
+
+    <div class="work-titles">
+      <p class="title" *ngFor="let work of works" [style.width]="work.width + '%' ">{{work.title}}</p>
+    </div>
+    <div class="work-scale">
+      <div class="work-period" *ngFor="let work of works"  
+           [style.width]="work.width + '%' ">
+           <p class="duration">{{work.duration}}</p>
+      </div>
+    </div>
+    <div class="work-imgs-container ui special cards">
+      <div class="card" *ngFor="let work of works">
+          <div class="content">
+            <div class="center">
+              <img [src]="'img/'+ work.img">
+              <p class="work-date">{{work.date}}</p>
+              <h4 class="work-description">{{work.description}}</h4>
+            </div>
+          </div>
+	        <div class="header">
+	        	<h3 class="work-title">{{work.title}}</h3>
+	        	<p class="work-position">{{work.position}}</p>
+	        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

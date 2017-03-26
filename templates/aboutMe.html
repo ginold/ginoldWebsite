@@ -1,8 +1,19 @@
-<h1 class="text-center">Me, Myself & I</h1>
 <working-experience></working-experience>
-
+<project-cards></project-cards>
 <myself></myself>
 <education></education>
+
+<section class="programming-languages">
+	<div class="programming-item" *ngFor="let prog of progLangs; let i = index">
+	<div class="programming-bg" [style.background-image]="'url(img/' + prog.img + ')'"></div>
+		<div class="programming-title-container">
+			<p class="programming-title">{{prog.title}}</p>
+			<div id="programming-circle-{{i}}" class="progress-circle">
+			</div>
+		</div>
+	</div>
+
+</section>
 
 
 <div class="ui raised segment about-me-segment">
@@ -11,7 +22,7 @@
 		<div class="stretched column">
 
 
-			<article  id="competences" class="ui segment tab-content hidden">
+			<article  id="competences" class="ui segment tab-content">
 
 				<div class="ui top attached tabular menu item four">
 					<a class="item active" data-tab="software-skills"><i class="icon code"></i>Software Skills</a>
@@ -21,7 +32,8 @@
 				</div>
 				<div class="ui bottom attached tab segment active" data-tab="software-skills">
 					<div class="circles">
-						<div class="progress-circle fadeUpCircle transition hidden" [attr.data-value]="prog.value" *ngFor="let prog of progLangs">
+						<div class="progress-circle fadeUpCircle transition hidden" *ngFor="let prog of progLangs"
+						[attr.data-value]="prog.value">
 							<strong></strong>
 							<span>{{prog.title}}</span>
 						</div>
